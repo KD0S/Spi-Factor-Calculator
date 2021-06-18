@@ -27,6 +27,23 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.022" />
 
+    <TextView
+        android:id="@+id/precisionTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center_horizontal"
+        android:text="Precision ="
+        android:textColor="#C1C6E4"
+        android:textColorHighlight="#9C27B0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/CheckBtn"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputgamma"
+        app:layout_constraintVertical_bias="0.478" />
+
     <ImageView
         android:id="@+id/lorentzEqn"
         android:layout_width="215dp"
@@ -49,7 +66,7 @@
         app:layout_constraintHorizontal_bias="0.632"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lorentzEqn"
-        app:layout_constraintVertical_bias="0.944"
+        app:layout_constraintVertical_bias="0.692"
         app:srcCompat="@drawable/lorentzequationv_white" />
 
     <ImageView
@@ -69,7 +86,7 @@
         android:id="@+id/lorentzGamma2"
         android:layout_width="71dp"
         android:layout_height="68dp"
-        android:layout_marginBottom="184dp"
+        android:layout_marginBottom="160dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.047"
@@ -92,6 +109,7 @@
         android:textColorHint="#E5DBE6"
         android:textColorLink="#00000000"
         android:textSize="20sp"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
@@ -103,6 +121,7 @@
         android:id="@+id/inputgamma"
         android:layout_width="296dp"
         android:layout_height="59dp"
+        android:layout_marginTop="8dp"
         android:background="#00000000"
         android:fontFamily="sans-serif-medium"
         android:hint="Enter Calculated Lorentz Factor"
@@ -112,18 +131,40 @@
         android:textColorHint="#E5DBE6"
         android:textColorLink="#00000000"
         android:textSize="20sp"
+        android:inputType="numberDecimal"
         app:layout_constraintBottom_toTopOf="@+id/calculateBtn"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputv"
         app:layout_constraintVertical_bias="0.606" />
+
+    <EditText
+        android:id="@+id/inputPrecision"
+        android:layout_width="226dp"
+        android:layout_height="41dp"
+        android:background="#00000000"
+        android:fontFamily="sans-serif-medium"
+        android:hint="Limit Decimal Places"
+        android:singleLine="true"
+        android:textColor="#C1C6E4"
+        android:textColorHighlight="#00000000"
+        android:textColorHint="#E5DBE6"
+        android:textColorLink="#00000000"
+        android:textSize="20sp"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/CheckBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.718"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputv"
+        app:layout_constraintVertical_bias="0.753" />
 
     <Button
         android:id="@+id/CheckBtn"
         android:layout_width="128dp"
         android:layout_height="54dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="260dp"
         android:fontFamily="sans-serif-medium"
         android:text="Check"
         android:textColor="#BFB1D6"
@@ -154,7 +195,7 @@
         android:id="@+id/correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="184dp"
         android:fontFamily="sans-serif-condensed"
         android:foregroundGravity="center_horizontal"
         android:gravity="center"
@@ -164,8 +205,7 @@
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/lorentzGamma2"
-        app:layout_constraintVertical_bias="0.162" />
+        app:layout_constraintStart_toEndOf="@+id/lorentzGamma2" />
 </androidx.constraintlayout.widget.ConstraintLayout>
